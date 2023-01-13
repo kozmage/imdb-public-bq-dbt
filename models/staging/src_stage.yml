@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+
+  - name: imdb
+    description: Bigquery public dataset for imdb.
+    database: bigquery-public-data
+    schema: imdb
+    tables:
+      - name: name_basics
+        description: 
+      - name: reviews
+        description: 
+      - name: title_akas
+        description: 
+        description: 
+      - name: title_basics
+        description: 
+      - name: title_crew
+        description: 
+      - name: title_episode
+        description: 
+      - name: title_principals
+        description:       
+      - name: title_ratings
+        description:   
