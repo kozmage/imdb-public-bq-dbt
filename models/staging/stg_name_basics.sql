@@ -1,10 +1,4 @@
 
-{{
-  config(
-    tags = ["stage", "imdb"]
-  )
-}}
-
 with base as (
 
     select * from {{ source('imdb', 'name_basics') }}

@@ -4,7 +4,15 @@ models:
   - name: stg_title_basics
     description: Basic Movie INFO, filtered movies only.
     columns:
-      - name: 
+      - name: movie_id
+        description: PK
+      - name: type
         description: 
-        tests:
-          - not_null
+      - name: title
+        description: 
+      - name: year
+        description: 
+      - name: runtime_minutes
+        description: 
+      - name: genres_arr
+        description: 
