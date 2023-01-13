@@ -11,7 +11,6 @@ sources:
         description: Collection of movie personalities with basic info.
       - name: reviews
         description: Movie reviews.
-        description: 
       - name: title_basics
         description: English and original titles also product type (movie/short/etc.)
       - name: title_crew

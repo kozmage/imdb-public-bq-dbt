@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_name_basics
+    description: Movie Personalities with basic data
+    columns:
+      - name: 
+        description: 
+        tests:
+          - not_null

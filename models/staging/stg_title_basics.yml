@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_title_basics
+    description: Basic Movie INFO
+    columns:
+      - name: 
+        description: 
+        tests:
+          - not_null

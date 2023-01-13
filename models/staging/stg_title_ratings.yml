@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_title_ratings
+    description: Title IDs and ratings
+    columns:
+      - name: 
+        description: 
+        tests:
+          - not_null
