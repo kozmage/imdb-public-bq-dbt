@@ -19,7 +19,7 @@ final as (
     primary_title as title,
     start_year as year,
     runtime_minutes,
-    genres
+    split(genres) as genres_arr
     from base
     where title_type = 'movie'
 )

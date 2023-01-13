@@ -18,11 +18,11 @@ movie_filter as(
 final as (
 
     select
-    tconst as movie_id,
-    avarage_rating as rating,
-    num_votes as vote_count
-    from base b
-    inner join movie_filter f
+    f.movie_id,
+    b.avarage_rating as rating,
+    b.num_votes as vote_count
+    from movie_filter f
+    inner join base b
     on b.movie_id = f.movie_id
 )
 
