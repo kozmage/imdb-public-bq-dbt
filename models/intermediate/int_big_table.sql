@@ -43,17 +43,3 @@ final as (
 )
 
 select * from final
-
-
-
-/*
-    array(
-        select 
-        ot.f0_
-        from names sn, unnest(sn.titles_arr) ot
-        inner join titles st
-        on ot.f0_ = st.movie_id
-        inner join ratings sr
-        on ot.f0_ = sr.movie_id
-    ) as titles_arr
-*/
