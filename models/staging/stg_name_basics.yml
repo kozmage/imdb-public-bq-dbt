@@ -7,9 +7,9 @@ models:
       - name: person_id
         description: PK
       - name: name
-        description: 
+        description:  Personality's name
       - name: professions
-        description: 
+        description: Roles in film-making
       - name: titles_arr
-        description: 
+        description: Array of movie ID-s related to the personality.
 

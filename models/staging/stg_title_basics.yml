@@ -5,14 +5,12 @@ models:
     description: Basic Movie INFO, filtered movies only.
     columns:
       - name: movie_id
-        description: PK
-      - name: type
-        description: 
+        description: PK 
       - name: title
-        description: 
+        description: Movie title in English
       - name: year
-        description: 
+        description: Creation year
       - name: runtime_minutes
-        description: 
+        description: Runtime in minutes
       - name: genres_arr
-        description: 
+        description: Array of genres of the movie.

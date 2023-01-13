@@ -6,7 +6,7 @@
 }}
 
 with names as(
-    select * from {{ ref('stg_names_basics') }}
+    select * from {{ ref('stg_name_basics') }}
 ),
 
 titles as(
@@ -23,19 +23,38 @@ final as (
     n.person_id,
     n.name,
     n.professions,
-    array(
-        select * 
-        from unnest(n.titles_arr) ot
-        inner join titles st
-        on ot.x = st.movie_id
-        inner join ratings sr
-        on ot.x = sr.movie_id
-    ) as titles_arr
-    from names n
+    array_agg(struct(
+        u as ID,
+        t.title as title,
+        t.year as year,
+        t.runtime_minutes as length,
+        t.genres_arr as genres,
+        r.rating as rating,
+        r.vote_count as vote_count
+    ))
+    as info
+    from names n , 
+    unnest(n.titles_arr) u
     left outer join titles t
-    on
+    on u = t.movie_id
     left outer join ratings r
-    on
+    on u = r.movie_id
+    where array_length(n.titles_arr) > 0
+    group by 1, 2, 3
 )
 
 select * from final
+
+
+
+/*
+    array(
+        select 
+        ot.f0_
+        from names sn, unnest(sn.titles_arr) ot
+        inner join titles st
+        on ot.f0_ = st.movie_id
+        inner join ratings sr
+        on ot.f0_ = sr.movie_id
+    ) as titles_arr
+*/

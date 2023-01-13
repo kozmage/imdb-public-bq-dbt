@@ -1,3 +1,8 @@
+{{
+  config(
+    tags = ["stage", "imdb"]
+  )
+}}
 
 with base as (
 
@@ -13,11 +18,11 @@ final as (
 
     select
     f.movie_id,
-    b.avarage_rating as rating,
+    b.average_rating as rating,
     b.num_votes as vote_count
     from movie_filter f
     inner join base b
-    on b.movie_id = f.movie_id
+    on b.tconst = f.movie_id
 )
 
 select * from final

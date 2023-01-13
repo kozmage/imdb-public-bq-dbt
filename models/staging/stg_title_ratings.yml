@@ -5,9 +5,9 @@ models:
     description: Title IDs and ratings
     columns:
       - name: movie_id
-        description:
+        description: PK
       - name: rating
-        description: 
+        description: Avarage movie rating
       - name: vote_count
-        description: 
+        description: Number of rates on the movie
 

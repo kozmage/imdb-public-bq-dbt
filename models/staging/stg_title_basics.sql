@@ -1,3 +1,8 @@
+{{
+  config(
+    tags = ["stage", "imdb"]
+  )
+}}
 
 with base as (
 
@@ -9,7 +14,6 @@ final as (
 
     select
     tconst as movie_id,
-    titly_type as type,
     primary_title as title,
     start_year as year,
     runtime_minutes,
