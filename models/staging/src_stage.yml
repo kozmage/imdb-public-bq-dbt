@@ -8,19 +8,13 @@ sources:
     schema: imdb
     tables:
       - name: name_basics
-        description: 
+        description: Collection of movie personalities with basic info.
       - name: reviews
-        description: 
-      - name: title_akas
-        description: 
+        description: Movie reviews.
         description: 
       - name: title_basics
-        description: 
+        description: English and original titles also product type (movie/short/etc.)
       - name: title_crew
-        description: 
-      - name: title_episode
-        description: 
-      - name: title_principals
-        description:       
+        description: Title ID with Director and Writer ID.     
       - name: title_ratings
-        description:   
+        description: Title ID and related ratings with number of votes.
