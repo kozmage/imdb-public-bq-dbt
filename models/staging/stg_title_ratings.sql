@@ -23,6 +23,7 @@ final as (
     from movie_filter f
     inner join base b
     on b.tconst = f.movie_id
+    where b.num_votes > 5000
 )
 
 select * from final

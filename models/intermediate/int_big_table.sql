@@ -39,7 +39,6 @@ final as (
     on u = t.movie_id
     left outer join ratings r
     on u = r.movie_id
-    where array_length(n.titles_arr) > 0
     group by 1, 2, 3
 )
 

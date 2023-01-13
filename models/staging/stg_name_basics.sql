@@ -10,6 +10,10 @@ with base as (
 
 ),
 
+movie_filter as(
+    select movie_id from {{ ref('stg_title_ratings') }}
+),
+
 formated as (
 
     select
@@ -20,10 +24,24 @@ formated as (
     from base
 ),
 
+filtered as (
+
+    select
+    person_id,
+    name,
+    professions,
+    array(
+        select distinct u from movie_filter 
+        inner join unnest(titles_arr) u
+        on u = movie_id
+    ) as titles_arr
+    from formated
+),
+
 final as (
 
     select *
-    from formated
+    from filtered
     where professions like '%director%'
     or professions like '%actor%'
     or professions like '%writer%'
